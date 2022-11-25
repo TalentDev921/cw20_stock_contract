@@ -1,0 +1,15 @@
+[workspace]
+members = [
+    "contracts/cw20-base",
+    "contracts/stknsale",
+    "contracts/stknstaking",
+    "contracts/cw20-stock",
+    "contracts/stknmanager",
+    "contracts/stockpool",
+    "contracts/stockshorting",
+    "contracts/stockproviding",
+    "contracts/stocktrading",
+    
+
+]
+
