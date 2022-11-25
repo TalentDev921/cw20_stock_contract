@@ -1,0 +1,37 @@
+[package]
+name = "stknmanager"
+version = "1.0.0"
+authors = ["stephen"]
+edition = "2018"
+description = "Stocken Manager"
+
+exclude = [
+  "contract.wasm",
+  "hash.txt",
+]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+library = []
+
+[dependencies]
+cw-utils = { version = "0.14.0" }
+cw2 = { version = "0.14.0" }
+cw20 = { version = "0.14.0" }
+cw20-base = { version = "0.14.0", features = ["library"] }
+cosmwasm-std = { version = "1.0.0" }
+cw-storage-plus = { version = "0.14.0" }
+schemars = "0.8.3"
+serde = { version = "1.0.127", default-features = false, features = ["derive"] }
+
+thiserror = { version = "1.0.26" }
+hex = "0.4"
+cw20-stock = { path = "../cw20-stock", version = "1.0.0", features = ["library"]}
+stknstaking = { path = "../stknstaking", version = "1.0.0", features = ["library"]}
+
+[dev-dependencies]
+cosmwasm-schema = "1.0.0"
+serde_json = "1.0"
